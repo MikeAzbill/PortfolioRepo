@@ -1,6 +1,3 @@
-import './style.css';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 // Canvas setup
 const threejsCanvas = document.querySelector('#threejs-canvas')
 let width = threejsCanvas.offsetWidth
