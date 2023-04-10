@@ -21,9 +21,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 threejsCanvas.appendChild(renderer.domElement);
 
 
-
-
-
 function addStar() {
     const geometry = new THREE.SphereGeometry(0.25, 24, 24);
     const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
@@ -109,3 +106,34 @@ function addStar() {
   }
   
   animate();
+
+
+
+
+//update
+update()
+
+
+//resize check
+window.addEventListener('resize', onResize)
+
+function update() {
+    box.rotation.x += 0.005
+    box.rotation.y += 0.01
+    box.rotation.z += 0.01
+
+    renderer.render(scene, camera)
+    window.requestAnimationFrame(update)
+}
+
+
+function onResize() {
+    width = threejsCanvas.offsetWidth
+    height = threejsCanvas.offsetHeight
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    camera.aspect = width / height
+    camera.updateProjectionMatrix()
+}
