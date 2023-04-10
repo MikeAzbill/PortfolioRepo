@@ -5,8 +5,8 @@ let height = threejsCanvas.offsetHeight
 
 //scene and camera setup
 const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera(70, width / height, 1, 1000)
-camera.position.set(10, 10, 10)
+const camera = new THREE.PerspectiveCamera(70, width / height, 0.1, 1000)
+camera.position.setZ(30);
 camera.lookAt(0, 0, 0)
 
 //renderer setup
