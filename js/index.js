@@ -1,3 +1,6 @@
+import './style.css';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 // Canvas setup
 const threejsCanvas = document.querySelector('#threejs-canvas')
 let width = threejsCanvas.offsetWidth
@@ -5,8 +8,8 @@ let height = threejsCanvas.offsetHeight
 
 //scene and camera setup
 const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera(70, width / height, 0.1, 1000)
-camera.position.setZ(30);
+const camera = new THREE.PerspectiveCamera(70, width / height, 1, 1000)
+camera.position.set(10, 10, 10)
 camera.lookAt(0, 0, 0)
 
 //renderer setup
