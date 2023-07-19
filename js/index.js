@@ -32,7 +32,7 @@ update()
 window.addEventListener('resize', onResize)
 
 function update() {
-    box.rotation.x += 0.05
+    box.rotation.x += 5.05
     box.rotation.y += 0.01
     renderer.render(scene, camera)
     window.requestAnimationFrame(update)
